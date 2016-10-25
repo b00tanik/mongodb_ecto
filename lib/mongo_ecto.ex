@@ -471,7 +471,11 @@ defmodule Mongo.Ecto do
         :error
     end
   end
-  defp dump_objectid(_), do: :error
+  defp dump_objectid(_),
+    do: :error
+
+  defp from_datetime(_),
+    do: :error
 
   @doc false
   def autogenerate(:id),
